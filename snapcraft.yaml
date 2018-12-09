@@ -1,0 +1,18 @@
+name: magic-launch
+version: current
+summary: Fix libmagic conpatibility in snaps
+description: |
+  This remote part fixes libmagic file type autodetection compatibility in snaps.
+
+grade: stable
+confinement: strict
+
+parts:
+  magic-launch:
+    source: launchers
+    
+    plugin: dump
+    organize:
+      '*-launch': bin/
+    stage-packages:
+    - libmagic1
