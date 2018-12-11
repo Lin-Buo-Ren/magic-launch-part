@@ -2,7 +2,10 @@ name: magic-launch
 version: current
 summary: Fix libmagic conpatibility in snaps
 description: |
-  This remote part fixes libmagic file type autodetection compatibility in snaps.
+  This remote part fixes libmagic file type autodetection compatibility in snaps, refer the following snapcraft forum post for more info regarding the usage of this remote part:
+
+    The magic-launch remote part - doc - snapcraft.io
+    https://forum.snapcraft.io/t/the-magic-launch-remote-part/8906
 
 grade: stable
 confinement: strict
@@ -10,7 +13,7 @@ confinement: strict
 parts:
   magic-launch:
     source: launchers
-    
+
     plugin: dump
     organize:
       '*-launch': bin/
